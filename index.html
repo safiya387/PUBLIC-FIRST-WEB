@@ -10,7 +10,7 @@
     <style>
         :root {
             --primary: #00f3ff;
-            --secondary: #bd00ff;
+            --secondary: #0A1AFF;
             --bg: #050505;
             --text: #ffffff;
         }
@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
@@ -94,21 +94,21 @@
             transform: translateY(30px);
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 20px;
-            margin: 20px 0;
-            transition: transform 0.3s ease;
-        }
+ .card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
-        }
+/* 👇 මෙතන paste කරන්න */
+.card:hover {
+  transform: translateY(-6px);
+}
+
 
         /* Button Style */
         .btn {
@@ -155,25 +155,25 @@
 
     <main>
         <section id="home">
-            <h1 class="hero-text">Creative<br>Developer</h1>
-            <p class="subtitle hero-text">Architect of the digital realm. Specializing in high-impact Logo Design and Graphic Design</p>
-            <a href="#projects" class="btn hero-text">View Work</a>
+            <h1 class="hero-text">DesignPro<br>Hub</h1>
+            <p class="subtitle hero-text">Logo & Graphic Designer | Crafting Visual Identities</p>
+            <a href="#projects" class="btn hero-text">View Portfolio</a>
         </section>
 
         <section id="projects">
-            <h2 style="font-size: 3rem; margin-bottom: 40px;">Selected Projects</h2>
+            <h2 style="font-size: 4rem; margin-bottom: 50px;">Selected Projects</h2>
             <div class="project-grid">
                 <div class="card">
-                    <h3>Graphic Design</h3>
-                    <p>Creative solutions for all your digital and print needs</p>
-                </div>
-                <div class="card">
                     <h3>Logo Design</h3>
-                    <p>Memorable & Timeless Designs</p>
+                    <p>Designing unique visual marks that define, distinguish, and elevate your brand.</p>
                 </div>
                 <div class="card">
-                    <h3>Portfolio </h3>
-                    <p>Let’s Build Your Digital World!</p>
+                    <h3>Business Card Design</h3>
+                    <p>Turning a small piece of paper into a powerful networking tool for your brand.</p>
+                </div>
+                <div class="card">
+                    <h3>Graphic Design V1</h3>
+                    <p>"Where simplicity meets high-impact design.</p>
                 </div>
             </div>
         </section>
@@ -181,7 +181,8 @@
         <section id="contact">
             <h2 style="font-size: 3rem; margin-bottom: 20px;">Let's Talk</h2>
             <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 500px;">
-               Got a big idea? Let’s bring it to life. Message me today and let’s get to work!
+                Ready to make your brand stand out? I’m currently open for new challenges. Let’s chat!
+            </p>
             <a href="mailto:hello@me.com" class="btn" style="opacity: 1;">Email Me</a>
         </section>
     </main>
@@ -232,17 +233,18 @@
         scene.add(particlesMesh);
 
         // Create a Geometric Shape (Icosahedron)
-        const geoGeometry = new THREE.IcosahedronGeometry(1, 1);
+        const geoGeometry = new THREE.IcosahedronGeometry(1.6, 1);
         const geoMaterial = new THREE.MeshBasicMaterial({ 
-            color: 0xbd00ff, 
+            color:  0x1A3CFF
+ , 
             wireframe: true,
             transparent: true,
-            opacity: 0.3
+            opacity: 0.2
         });
         const geoMesh = new THREE.Mesh(geoGeometry, geoMaterial);
         scene.add(geoMesh);
 
-        camera.position.z = 3;
+        camera.position.z = 3
 
         // Mouse Interaction for 3D
         let mouseX = 0;
